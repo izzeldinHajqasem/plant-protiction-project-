@@ -9,7 +9,7 @@ radio.config(group=5)
 while True:
     clear_oled()
     recive= radio.receive()
-    if recive =="moisture levels are low water is being droobing" or recive == "a living organisim is near the plant":
+    if recive =="moisture level is low. pumping water " or recive == "a living organisim is near the plant":
         add_text(1,3,recive)
         sleep(20000)
     if button_a.is_pressed():
