@@ -11,7 +11,7 @@ while True:
     distance= pin2.read_digital()
     if moisture <= 30:
         #code for the water bump  
-        radio.send("moisture levels are low water is being droobing")
+        radio.send('moisture level is low. pumping water ')
     if distance <=15:
         if recive == "off":
             sleep(50000)
