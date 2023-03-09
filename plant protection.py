@@ -10,14 +10,17 @@ while True:
     moisture= pin0.read_analog()
     distance= pin2.read_digital()
     if moisture <= 500:
-        #code for the water bump  
-        radio.send('moisture level is low. pumping water ')
+             pin16.write_digital(1)
+             radio.send('moisture level is low. pumping water ')
+             sleep(3000)
+             pin16.write_digital(0)
+
     if distance <=15:
         if recive == "off":
             sleep(50000)
-        elif recive == "on":
+        else:
             #buzzer to kick the animal
             pin1.write_digital(1)
             radio.send("a living organisim is near the plant")
             sleep(50000)
-            pin2.write_digital(0)
+            pin1.write_digital(0)
