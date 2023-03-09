@@ -17,7 +17,7 @@ while True:
             sleep(50000)
         elif recive == "on":
             #buzzer to kick the animal
-            pin2.write_digital(1)
+            pin1.write_digital(1)
             radio.send("a living organisim is near the plant")
             sleep(50000)
             pin2.write_digital(0)
